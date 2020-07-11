@@ -1,28 +1,17 @@
-## pi-compute-board
+## pi-cluster-one
 
-pi-compute-board is add-on hardware for a Raspberry Pi for remote monitoring
-and control in a cluster context.  It provides:
+This was an early attempt at implementing a Raspberry Pi cluster
+with eurocard backplane.
+
+The design loosely mimics the [Meiko CS/2](https://github.com/garlick/meiko-cs2)
+management network design, implementing a CAN bus network for
 
 * Remote Power/Reset
 * Remote Serial console
 * Remote Power (watts) monitoring
 * Remote Beacon LED
 
-This is accomplished using management processors and a two-level CAN bus
-network, somewhat similar to the CAN bus architecture of the
-[Meiko CS/2](https://github.com/garlick/meiko-cs2).
-
-### v2 Prototype
-
-The v2 prototype is under active devleopment.
-
-An STM32F103C8T6 embedded processor replaces the Teensy as management
-controller, and the management electronics are squeezed down to an
-elongated HAT(ish) Pi daughter board with a DIN 3x16 connector on the end.
-
-### v1 Prototype
-
-The initial prototype is a 3U eurocard with the Pi 3 on standoffs, and
+The prototype is a 3U eurocard with the Pi 3 on standoffs, and
 some other hardware including a
 [teensy3.2](https://www.pjrc.com/store/teensy32.html) as a management
 controller.  The teensy is attached to the local (L-CAN) CAN bus via a
