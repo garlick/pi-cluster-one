@@ -48,7 +48,7 @@ SRCS_CXX = \
 	encoder.cpp \
 	heartbeat.cpp
 
-CANMGR_DIR := $(shell pwd)/../libcanmgr
+CANMGR_DIR := $(shell pwd)/../../libcanmgr
 VPATH = $(CANMGR_DIR)
 
 # configurable options
